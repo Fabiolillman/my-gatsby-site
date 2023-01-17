@@ -109,8 +109,8 @@ display: flex;
 .img-container{
   position: absolute;
   z-index: 6;
-  width: 23rem;
-height: 23rem;
+max-width: 23rem;
+max-height: 23rem;
 border-radius: 50%;
 overflow: hidden;
 }
