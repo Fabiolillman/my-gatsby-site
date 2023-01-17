@@ -29,7 +29,7 @@ const SingleProjectsPage = ({data}) => {
 <h2>{post.title}</h2>
 <p>{post.description}</p>
 <div className="replace-links">
-<a href="#">View Site</a>
+<a href="javascript:void(0)">View Site</a>
 </div>
 </article>
     </StyledSingleProduct>

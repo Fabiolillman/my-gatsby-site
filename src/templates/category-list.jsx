@@ -22,7 +22,7 @@ const CategoryListPage = ({data}) => {
    <p>{node.description}</p>
    <div className="button-wrap">
    <StyledLink to={`/projects/${node.slug}/`}>More Info</StyledLink>
-   <a href="">View Site</a>
+   <a href="#">View Site</a>
    {/* <StyledLink to={`/category/${node.skill}/`}>{node.skill}</StyledLink> */}
    </div>
    </div>
