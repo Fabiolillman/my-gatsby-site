@@ -7,7 +7,7 @@ import Hamburger from './../images/hamburger-menu.svg'
 const SideMenu = () => {
 
 const [isOpen, setIsOpen] = useState(false);
-
+// Hamburger menu
 useEffect(() => {
     if (window.innerWidth < 950) {
         setIsOpen(false);
