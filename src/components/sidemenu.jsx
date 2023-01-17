@@ -6,37 +6,6 @@ import { Link } from "gatsby";
 
 const SideMenu = () => {
 
-// const [isOpen, setIsOpen] = useState(false);
-// const isBrowser = typeof window !== "undefined"
-
-// // Hamburger menu
-// useEffect(() => {
-//   if (isBrowser) {
-//     if (window.innerWidth < 950) {
-//         setIsOpen(false);
-//     } else {
-//         setIsOpen(true);
-//     }
-//     const handleResize = () => {
-//         if (prevWidth < 950 && window.innerWidth >= 950) {
-//             setIsOpen(true);
-//         } else if (prevWidth >= 950 && window.innerWidth < 950) {
-//             setIsOpen(false);
-//         }
-//         // Store the previous value of window.width
-//         prevWidth = window.innerWidth;
-//     };
-//     // Store the previous value of window.width
-//     let prevWidth = window.innerWidth;
-//     // Add eventlisterner to window every time it resizes 
-//     window.addEventListener("resize", handleResize);
-//     return () => window.removeEventListener("resize", handleResize);
-//   }
-// }, [isBrowser]);
-
-// function toggle() {
-//   setIsOpen(!isOpen);
-// }
 
 
 
@@ -50,7 +19,7 @@ const SideMenu = () => {
   </svg>
 </button>
 
-    {/* // I'm using an additional wrap to be able to use the property of display for flex on the inner div */}
+
     <div className="hide-nav-wrap">
   <nav className="link-wrap">
     <StyledLink to="/">Home</StyledLink>
