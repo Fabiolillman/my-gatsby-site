@@ -3,7 +3,6 @@ import SideMenu from "../components/sidemenu"
 import '../index.css';
 import styled from 'styled-components';
 import { graphql } from "gatsby"
-import WebFont from 'webfontloader';
 import { useEffect } from "react";
 
 
