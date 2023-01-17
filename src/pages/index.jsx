@@ -116,7 +116,7 @@ overflow: hidden;
 }
 
 img{
-width: 23rem;
+max-width: 23rem;
 background-size: contain;
 overflow: hidden;
 }
