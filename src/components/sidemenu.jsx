@@ -1,25 +1,57 @@
-import React from "react"
+import React, {useState,useEffect} from "react"
 import styled from 'styled-components';
 import { Link } from "gatsby";
-// import Cross from './../images/cross.svg'
-// import Hamburger from './../images/hamburger-menu.svg'
+import Cross from './../images/cross.svg'
+import Hamburger from './../images/hamburger-menu.svg'
 
 const SideMenu = () => {
 
+const [isOpen, setIsOpen] = useState(false);
+const isBrowser = typeof window !== "undefined"
+
+// Hamburger menu
+useEffect(() => {
+  if (isBrowser) {
+    if (window.innerWidth < 950) {
+        setIsOpen(false);
+    } else {
+        setIsOpen(true);
+    }
+    const handleResize = () => {
+        if (prevWidth < 950 && window.innerWidth >= 950) {
+            setIsOpen(true);
+        } else if (prevWidth >= 950 && window.innerWidth < 950) {
+            setIsOpen(false);
+        }
+        // Store the previous value of window.width
+        prevWidth = window.innerWidth;
+    };
+    // Store the previous value of window.width
+    let prevWidth = window.innerWidth;
+    // Add eventlisterner to window every time it resizes 
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }
+}
+, [isBrowser]);
+
+function toggle() {
+  setIsOpen(!isOpen);
+}
 
 
 
 
     return (
-        <StyledSideMenu >
-<button 
+        <StyledSideMenu isOpen={isOpen}>
+<button className={`hamburger-button ${isOpen ? 'open' : ''}`} onClick={toggle}
 >
   <svg>
     {/* Hamburger icon */}
   </svg>
 </button>
-
-
+{isOpen && (
+    // I'm using an additional wrap to be able to use the property of display for flex on the inner div
     <div className="hide-nav-wrap">
   <nav className="link-wrap">
     <StyledLink to="/">Home</StyledLink>
@@ -39,7 +71,7 @@ const SideMenu = () => {
             </ul>
   </div>
   
-
+)}
 
 
         </StyledSideMenu>
@@ -124,7 +156,7 @@ top: 0;
     background-color: transparent;
     background-size: cover;
     //Changes img back to hamburger after screen resize
-
+    background-image: ${({isOpen}) => isOpen ? `url(${Cross})` : `url(${Hamburger})`};
     transition: background-image 0.3s;
     width: 50px;
     height: 50px;
