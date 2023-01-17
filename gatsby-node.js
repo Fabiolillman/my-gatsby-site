@@ -53,7 +53,9 @@ const { data: categoryData } = await graphql(`
 query getAllProjectSlugs {
   allContentfulProjects {
     nodes {
-      skill
+      category {
+        category
+      }
     }
   }
 }
@@ -63,11 +65,11 @@ query getAllProjectSlugs {
 categoryData.allContentfulProjects.nodes.forEach(node => {
     actions.createPage({
         //URL
-        path: '/category/' + node.skill,
+        path: '/category/' + node.category.category,
         // Template
         component: path.resolve('./src/templates/category-list.jsx'),
         //Content
-        context: {skill: node.skill}
+        context: {skill: node.category.category}
     })
 })
 

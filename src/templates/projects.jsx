@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import styled from 'styled-components';
 import SideMenu from "../components/sidemenu"
 
@@ -30,6 +30,8 @@ const SingleProjectsPage = ({data}) => {
 <p>{post.description}</p>
 <div className="replace-links">
 <a href="javascript:void(0)">View Site</a>
+<StyledLink to={`/category/${post.category.category}`}>{post.category.category}</StyledLink>
+
 </div>
 </article>
     </StyledSingleProduct>
@@ -75,8 +77,12 @@ p{
     margin-top: 3.5rem;
 }
 
+.replace-links{
+display: flex;
+}
+
 .replace-links a{
-  margin-top: 2rem;
+  margin: 2rem 1rem 0 0;
   display: block;
  border: 1px solid black;
 background-color: white;
@@ -111,19 +117,37 @@ flex-direction: column;
 }
 
 .replace-links{
+  flex-direction: row;
   margin-bottom: 2rem;
 }
 }
 
 @media screen and (max-width: 650px) {
+  .replace-links{
+  flex-direction: column;
+}
   img{
     width: 15rem;
     height: 15rem;
 }
 
 }
-
 `
+
+const StyledLink = styled(Link)`
+//add this for actual publishing, and remove category link
+border: 1px solid black;
+background-color: white;
+width: 10rem;
+height: 3.5rem;
+font-size: 1.2rem;
+text-decoration: none;
+text-align: center;
+line-height: 3.5rem;
+font-family: 'Michroma';
+color: black;
+`
+
 
 export default SingleProjectsPage
 
@@ -132,7 +156,10 @@ query SingleProjects($slug: String!) {
   contentfulProjects(slug: { eq: $slug }) {
     description
     title
-    skill
+    category {
+      id
+      category
+    }
     image {
       url
             gatsbyImage(

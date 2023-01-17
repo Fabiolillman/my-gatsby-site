@@ -3,8 +3,8 @@ import * as React from "react"
 import styled from 'styled-components';
 import SideMenu from "../components/sidemenu";
 
-
 const ProjectList = ({data}) => {
+
   return (
     <StyledProjectList  >
      <SideMenu/>
@@ -20,7 +20,7 @@ const ProjectList = ({data}) => {
     <div className="button-wrap">
     <StyledLink to={`/projects/${node.slug}/`}>More Info</StyledLink>
     <a href="javascript:void(0)">View site</a>
-    <StyledLink to={`/category/${node.skill}/`}>{node.skill}</StyledLink>
+    <StyledLink to={`/category/${node.category.category}`}>{node.category.category}</StyledLink>
     </div>
     </div>
   </div>
@@ -144,20 +144,24 @@ color: black;
 }
 `
 export const query = graphql`
-  query MyQuery {
-    allContentfulProjects {
-      nodes {
-        title
-        description
-        slug
-        skill
+query MyQuery {
+  allContentfulProjects {
+    nodes {
+      title
+      description
+      slug
+      skill
+      id
+      image {
+        url
+      }
+      category {
         id
-        image {
-          url
-        }
+        category
       }
     }
   }
+}
 `;
 
 
