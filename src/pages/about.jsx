@@ -13,7 +13,7 @@ const AboutPage = ({data}) => {
   <article key={node.id}>  
 
  <h3>{node.siteTitle}</h3>
-  <h5>{node.textIntro}</h5>
+  <h4>{node.textIntro}</h4>
   {/* Convert rich text to json */}
   <div>{documentToReactComponents(JSON.parse(node.text1.raw))}</div>
  <div>{documentToReactComponents(JSON.parse(node.text2.raw))}</div>
@@ -25,7 +25,7 @@ const AboutPage = ({data}) => {
            <h1>Education</h1>
             {data.allContentfulEducation.nodes.map(node => (
          <article key={node.id}>  
-        <h4>{node.title}</h4>
+        <h5>{node.title}</h5>
          <p>{node.description}</p>
          <p>{node.year}</p>
         </article>
@@ -36,7 +36,7 @@ const AboutPage = ({data}) => {
 <h1>Work Experience</h1>
           {data.allContentfulWorkExperience.nodes.map(node => (
          <article key={node.id}>  
-        <h4>{node.title}</h4>
+        <h5>{node.title}</h5>
          <p>{node.description}</p>
          <p>{node.year}</p>
         </article>
@@ -61,7 +61,7 @@ article{
     width: 50%;
 }
 
-article h5{
+article h4{
 font-size: 1.5rem;
 margin: 3.5rem 0;
 }
@@ -94,7 +94,7 @@ border: 1px solid green;
 padding: 0.5rem;
 margin-bottom: 1rem;
 }
-.wrap p, .wrap h4{
+.wrap p, .wrap h5{
   font-size: 1rem;
 }
 

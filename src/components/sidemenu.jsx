@@ -6,38 +6,37 @@ import Hamburger from './../images/hamburger-menu.svg'
 
 const SideMenu = () => {
 
-const [isOpen, setIsOpen] = useState(false);
-const isBrowser = typeof window !== "undefined"
+// const [isOpen, setIsOpen] = useState(false);
+// const isBrowser = typeof window !== "undefined"
 
-// Hamburger menu
-useEffect(() => {
-  if (isBrowser) {
-    if (window.innerWidth < 950) {
-        setIsOpen(false);
-    } else {
-        setIsOpen(true);
-    }
-    const handleResize = () => {
-        if (prevWidth < 950 && window.innerWidth >= 950) {
-            setIsOpen(true);
-        } else if (prevWidth >= 950 && window.innerWidth < 950) {
-            setIsOpen(false);
-        }
-        // Store the previous value of window.width
-        prevWidth = window.innerWidth;
-    };
-    // Store the previous value of window.width
-    let prevWidth = window.innerWidth;
-    // Add eventlisterner to window every time it resizes 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }
-}
-  , [isBrowser]);
+// // Hamburger menu
+// useEffect(() => {
+//   if (isBrowser) {
+//     if (window.innerWidth < 950) {
+//         setIsOpen(false);
+//     } else {
+//         setIsOpen(true);
+//     }
+//     const handleResize = () => {
+//         if (prevWidth < 950 && window.innerWidth >= 950) {
+//             setIsOpen(true);
+//         } else if (prevWidth >= 950 && window.innerWidth < 950) {
+//             setIsOpen(false);
+//         }
+//         // Store the previous value of window.width
+//         prevWidth = window.innerWidth;
+//     };
+//     // Store the previous value of window.width
+//     let prevWidth = window.innerWidth;
+//     // Add eventlisterner to window every time it resizes 
+//     window.addEventListener("resize", handleResize);
+//     return () => window.removeEventListener("resize", handleResize);
+//   }
+// }, [isBrowser]);
 
-function toggle() {
-  setIsOpen(!isOpen);
-}
+// function toggle() {
+//   setIsOpen(!isOpen);
+// }
 
 
 
@@ -156,7 +155,7 @@ top: 0;
     background-color: transparent;
     background-size: cover;
     //Changes img back to hamburger after screen resize
-    background-image: ${({isOpen}) => isOpen ? `url(${Cross})` : `url(${Hamburger})`};
+
     transition: background-image 0.3s;
     width: 50px;
     height: 50px;
