@@ -4,7 +4,7 @@ import SideMenu from "../components/sidemenu"
 import { graphql } from "gatsby"
 // Used to display rich text to correct format
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-
+// This is a comment to test
 const AboutPage = ({data}) => {
     return (
         <StyledSideMenu>
