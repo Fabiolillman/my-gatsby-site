@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from "react"
 import styled from 'styled-components';
 import { Link } from "gatsby";
-import Cross from './../images/Cross.svg'
+import Cross from './../images/cross.svg'
 import Hamburger from './../images/hamburger-menu.svg'
 
 const SideMenu = () => {
