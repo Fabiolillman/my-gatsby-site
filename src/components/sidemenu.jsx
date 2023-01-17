@@ -7,8 +7,11 @@ import Hamburger from './../images/hamburger-menu.svg'
 const SideMenu = () => {
 
 const [isOpen, setIsOpen] = useState(false);
+const isBrowser = typeof window !== "undefined"
+
 // Hamburger menu
 useEffect(() => {
+  if (isBrowser) {
     if (window.innerWidth < 950) {
         setIsOpen(false);
     } else {
@@ -28,7 +31,9 @@ useEffect(() => {
     // Add eventlisterner to window every time it resizes 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }
+}
+  , [isBrowser]);
 
 function toggle() {
   setIsOpen(!isOpen);
