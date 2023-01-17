@@ -3,19 +3,12 @@ import SideMenu from "../components/sidemenu"
 import '../index.css';
 import styled from 'styled-components';
 import { graphql } from "gatsby"
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 
 
 const IndexPage = ({data}) => {
 
-  useEffect(() => {
-    WebFont.load({
-      google: {
-        families: ['Michroma']
-      }
-    });
-   }, []);
 
   return (
     <StyledHomeMenu >
