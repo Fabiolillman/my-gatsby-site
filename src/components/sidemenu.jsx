@@ -1,8 +1,8 @@
-import React, {useState,useEffect} from "react"
+import React from "react"
 import styled from 'styled-components';
 import { Link } from "gatsby";
-import Cross from './../images/cross.svg'
-import Hamburger from './../images/hamburger-menu.svg'
+// import Cross from './../images/cross.svg'
+// import Hamburger from './../images/hamburger-menu.svg'
 
 const SideMenu = () => {
 
@@ -42,15 +42,15 @@ const SideMenu = () => {
 
 
     return (
-        <StyledSideMenu isOpen={isOpen}>
-<button className={`hamburger-button ${isOpen ? 'open' : ''}`} onClick={toggle}
+        <StyledSideMenu >
+<button 
 >
   <svg>
     {/* Hamburger icon */}
   </svg>
 </button>
-{isOpen && (
-    // I'm using an additional wrap to be able to use the property of display for flex on the inner div
+
+    {/* // I'm using an additional wrap to be able to use the property of display for flex on the inner div */}
     <div className="hide-nav-wrap">
   <nav className="link-wrap">
     <StyledLink to="/">Home</StyledLink>
@@ -70,7 +70,7 @@ const SideMenu = () => {
             </ul>
   </div>
   
-)}
+
 
 
         </StyledSideMenu>
