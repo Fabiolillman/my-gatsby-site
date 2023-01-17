@@ -3,13 +3,25 @@ import SideMenu from "../components/sidemenu"
 import '../index.css';
 import styled from 'styled-components';
 import { graphql } from "gatsby"
+import { useEffect, useState } from "react";
 // import { useEffect } from "react";
 
 
 
 const IndexPage = ({data}) => {
+  const [loaded, setLoaded] = useState(false);
 
+  useEffect(() => {
+    // Wait for the site to load before setting the "loaded" state to true
+    Promise.all([
+      new Promise(resolve => window.addEventListener("load", resolve)),
+      new Promise(resolve => setTimeout(resolve, 3000))
+    ]).then(() => setLoaded(true));
+  }, []);
 
+    if (!loaded) {
+    return null;
+  }
   return (
     <StyledHomeMenu >
       <SideMenu/>
