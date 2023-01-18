@@ -12,6 +12,7 @@ const IndexPage = ({data}) => {
 
   return (
     <StyledHomeMenu >
+      <helmet> </helmet>
       <SideMenu/>
      {data.allContentfulPerson.nodes.map(node => (
   <div key={node.id} className="project-container">
@@ -117,6 +118,7 @@ overflow: hidden;
 
 img{
 max-width: 23rem;
+max-height: 34.5rem;
 background-size: contain;
 overflow: hidden;
 }
@@ -444,3 +446,4 @@ query MyQuery {
 
 
 export const Head = () => <title>Home</title>
+//Add meta tags directly here for site description

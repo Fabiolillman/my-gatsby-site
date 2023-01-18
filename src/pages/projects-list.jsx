@@ -122,7 +122,6 @@ color: black;
 
 const StyledLink = styled(Link)`
 //add this for actual publishing, and remove category link
-/* position: absolute; */
 border: 1px solid black;
 background-color: white;
 width: 10rem;
@@ -133,15 +132,6 @@ text-align: center;
 line-height: 3.5rem;
 font-family: 'Michroma';
 color: black;
-::before{
-    /* content: 'Category'; */
-    /* padding: 2rem 0; */
-    /* color: red; */
-}
-::after{
-    /* content: '/>'; */
-    /* color: red; */
-}
 `
 export const query = graphql`
 query MyQuery {

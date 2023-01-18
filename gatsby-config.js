@@ -10,6 +10,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `My Gatsby Site`,
+    description: `Headless CMS portfolio website`,
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: [{
