@@ -155,5 +155,12 @@ query MyQuery {
 `;
 
 
-export const Head = () => <title>Projects</title>
+// export const Head = () => <title>Projects</title>
 // export const Head = () => <title>Home Page</title>
+export const Head = () => (
+  <>
+  <title>Projects</title>
+  <meta name="description" content="A list of all my projects" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </>
+  )

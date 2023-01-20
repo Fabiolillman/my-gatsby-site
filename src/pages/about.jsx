@@ -56,10 +56,10 @@ const AboutPage = ({data}) => {
  <aside className="list-container">
   
   <div className="work wrap">
-           <h1>Education</h1>
+           <h2>Education</h2>
             {data.allContentfulEducation.nodes.map(node => (
          <article key={node.id}>  
-        <h5>{node.title}</h5>
+        <h3>{node.title}</h3>
          <p>{node.description}</p>
          <p>{node.year}</p>
         </article>
@@ -67,10 +67,10 @@ const AboutPage = ({data}) => {
 </div>
 
 <div className="education wrap">
-<h1>Work Experience</h1>
+<h2>Work Experience</h2>
           {data.allContentfulWorkExperience.nodes.map(node => (
          <article key={node.id}>  
-        <h5>{node.title}</h5>
+        <h3>{node.title}</h3>
          <p>{node.description}</p>
          <p>{node.year}</p>
         </article>
@@ -259,7 +259,7 @@ article p{
   width: 45%;
 }
 
-.wrap h1{
+.wrap h2{
 margin-bottom: 1rem;
 font-size: 1.3rem;
 font-size: 1.5vw;
@@ -273,13 +273,14 @@ border: 1px solid green;
 padding: 0.5rem;
 margin-bottom: 1rem;
 }
-.wrap p, .wrap h5{
+.wrap p, .wrap h3{
+  text-align: start;
   font-size: 1rem;
 }
 
 
 @media screen and (max-width: 1090px) {
-  .wrap h1{
+  .wrap h2{
 font-size: 1.4vw;
 }
 }
@@ -288,7 +289,7 @@ font-size: 1.4vw;
 
   margin-left: 0;
   width: 100%;
-  .wrap h1{
+  .wrap h2{
 font-size: 1.8vw;
 }
 .container {
@@ -309,8 +310,8 @@ article{
 
 @media screen and (max-width: 650px) {
   padding: 0 3rem;
-  .wrap h1{
-font-size: 3.2vw;
+  .wrap h2{
+font-size: 2.7vw;
 }
 
   article{
@@ -322,7 +323,7 @@ font-size: 3.2vw;
 }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 460px) {
 .work article, .education article{
  height: auto;
 }
@@ -370,4 +371,11 @@ query MyQuery {
 
 export default AboutPage
 
-export const Head = () => <title>About</title>
+// export const Head = () => <title>About</title>
+export const Head = () => (
+  <>
+  <title>About</title>
+  <meta name="description" content="About page talking about me as a person" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </>
+  )

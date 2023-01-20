@@ -135,4 +135,11 @@ query MyQuery {
 export default ContactPage
 
 
-export const Head = () => <title>Contact</title>
+// export const Head = () => <title>Contact</title>
+export const Head = () => (
+  <>
+  <title>Contact</title>
+  <meta name="description" content="Contact page with contact info" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </>
+  )

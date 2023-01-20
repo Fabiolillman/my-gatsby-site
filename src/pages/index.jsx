@@ -458,5 +458,13 @@ query MyQuery {
 `;
 
 
-export const Head = () => <title>Home</title>
+// export const Head = () => <title>Home</title>
 //Add meta tags directly here for site description
+export const Head = () => (
+<>
+<title>Home</title>
+<meta name="description" content="This is a portfolio website" />
+<meta name="keywords" content="website, portfolio" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</>
+)

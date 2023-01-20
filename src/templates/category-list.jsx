@@ -154,4 +154,11 @@ query ProjectsByCategory($skill: String!) {
   }
 `;
 
-export const Head = () => <title>Category</title>
+// export const Head = () => <title>Category</title>
+export const Head = () => (
+  <>
+  <title>Category</title>
+  <meta name="description" content="List of category" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </>
+  )

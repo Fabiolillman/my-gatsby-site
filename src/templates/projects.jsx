@@ -176,5 +176,12 @@ query SingleProjects($slug: String!) {
 `;
 
 
-export const Head = () => <title>Project</title>
+// export const Head = () => <title>Project</title>
 
+export const Head = () => (
+  <>
+  <title>Project</title>
+  <meta name="description" content="List single project" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </>
+  )

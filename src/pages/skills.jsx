@@ -122,5 +122,12 @@ query AllSkills {
 `;
 
 
-export const Head = () => <title>Skills</title>
+// export const Head = () => <title>Skills</title>
 // export const Head = () => <title>Home Page</title>
+export const Head = () => (
+  <>
+  <title>Skill</title>
+  <meta name="description" content="Displaying my skills" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </>
+  )
