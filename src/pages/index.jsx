@@ -168,6 +168,19 @@ button{
   height: 3rem;
   color: white;
   background: #232323;
+  &:hover{
+    /* color: red; */
+    transition: 1s;
+    box-shadow:
+    0 0 3px #fff,
+    0 0 5px #fff,
+    0 0 11px #fff,
+    0 0 32px #0fa,
+    0 0 42px #0fa,
+    0 0 72px #0fa,
+    0 0 90px #0fa,
+    0 0 120px #0fa;
+  }
 }
 h2{
 text-align: center;
