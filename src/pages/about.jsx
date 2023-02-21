@@ -53,9 +53,9 @@ const AboutPage = ({data}) => {
  <div>{documentToReactComponents(JSON.parse(node.text2.raw))}</div>
  </article>
  ))}
- <aside className="list-container">
+ {/* <aside className="list-container"> */}
   
-  <div className="work wrap">
+  {/* <div className="work wrap">
            <h2>Education</h2>
             {data.allContentfulEducation.nodes.map(node => (
          <article key={node.id}>  
@@ -64,9 +64,9 @@ const AboutPage = ({data}) => {
          <p>{node.year}</p>
         </article>
         ))}
-</div>
+</div> */}
 
-<div className="education wrap">
+{/* <div className="education wrap">
 <h2>Work Experience</h2>
           {data.allContentfulWorkExperience.nodes.map(node => (
          <article key={node.id}>  
@@ -75,8 +75,8 @@ const AboutPage = ({data}) => {
          <p>{node.year}</p>
         </article>
         ))}
-</div>
-</aside>
+</div> */}
+{/* </aside> */}
         </StyledSideMenu>
     )
 };
@@ -84,17 +84,18 @@ const AboutPage = ({data}) => {
 
 const StyledSideMenu = styled.main`
 /* Check padding/box-sizing for when releasing the graded version */
-padding: 2rem;
+/* padding: 2rem; */
+text-align: center;
 box-sizing: border-box;
 font-size: 1.3rem;
-height: 100%;
-margin-left: 13rem;
+min-height: 100vh;
+/* margin-left: 5rem; */
  display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center; 
 overflow: hidden;
-overflow-y: hidden;
+
 
 /* TUBE ANIMATION */
         .tube-upper{
@@ -242,6 +243,7 @@ article{
 }
 
 article h4{
+  /* text-align: center; */
 font-size: 1.5rem;
 margin: 3.5rem 0;
 }

@@ -22,7 +22,7 @@ const CategoryListPage = ({data}) => {
    <p>{node.description}</p>
    <div className="button-wrap">
    <StyledLink to={`/projects/${node.slug}/`}>More Info</StyledLink>
-   <a href="#">View Site</a>
+   <a href="javascript:void(0)">View Site</a>
    {/* <StyledLink to={`/category/${node.skill}/`}>{node.skill}</StyledLink> */}
    </div>
    </div>
@@ -154,11 +154,4 @@ query ProjectsByCategory($skill: String!) {
   }
 `;
 
-// export const Head = () => <title>Category</title>
-export const Head = () => (
-  <>
-  <title>Category</title>
-  <meta name="description" content="List of category" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </>
-  )
+export const Head = () => <title>Category</title>

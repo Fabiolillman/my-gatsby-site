@@ -8,6 +8,54 @@ const ProjectList = ({data}) => {
   return (
     <StyledProjectList  >
      <SideMenu/>
+     <div className="tube-upper right"></div>
+     <div className="tube-upper left"></div>
+     <div className="tube top">
+     <svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#85e08b" fillOpacity="1" d="M0,160L80,160C160,160,320,160,480,138.7C640,117,800,75,960,85.3C1120,96,1280,160,1360,192L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+</svg>
+        <svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#85e08b" fillOpacity="1" d="M0,160L80,160C160,160,320,160,480,138.7C640,117,800,75,960,85.3C1120,96,1280,160,1360,192L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+</svg>
+        <svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#85e08b" fillOpacity="1" d="M0,160L80,160C160,160,320,160,480,138.7C640,117,800,75,960,85.3C1120,96,1280,160,1360,192L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+</svg>
+<svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#85e08b" fillOpacity="1" d="M0,160L80,160C160,160,320,160,480,138.7C640,117,800,75,960,85.3C1120,96,1280,160,1360,192L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+</svg>
+<svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#85e08b" fillOpacity="1" d="M0,160L80,160C160,160,320,160,480,138.7C640,117,800,75,960,85.3C1120,96,1280,160,1360,192L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+</svg>
+<svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#85e08b" fillOpacity="1" d="M0,160L80,160C160,160,320,160,480,138.7C640,117,800,75,960,85.3C1120,96,1280,160,1360,192L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+</svg>
+      <div className="slime top">
+        <div className="tube-goo right"></div>
+        <div className="tube-goo left"></div>
+
+      </div>
+     </div>
+     <div className="tube mid">
+           <svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#85e08b" fillOpacity="1" d="M0,160L80,160C160,160,320,160,480,138.7C640,117,800,75,960,85.3C1120,96,1280,160,1360,192L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+</svg>
+        <svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#85e08b" fillOpacity="1" d="M0,160L80,160C160,160,320,160,480,138.7C640,117,800,75,960,85.3C1120,96,1280,160,1360,192L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+</svg>
+        <svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#85e08b" fillOpacity="1" d="M0,160L80,160C160,160,320,160,480,138.7C640,117,800,75,960,85.3C1120,96,1280,160,1360,192L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+</svg>
+<svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#85e08b" fillOpacity="1" d="M0,160L80,160C160,160,320,160,480,138.7C640,117,800,75,960,85.3C1120,96,1280,160,1360,192L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+</svg>
+<svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#85e08b" fillOpacity="1" d="M0,160L80,160C160,160,320,160,480,138.7C640,117,800,75,960,85.3C1120,96,1280,160,1360,192L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+</svg>
+<svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#85e08b" fillOpacity="1" d="M0,160L80,160C160,160,320,160,480,138.7C640,117,800,75,960,85.3C1120,96,1280,160,1360,192L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+</svg>
+     <div className="slime mid"></div>
+     </div>
      <article>
      <h3>Projects</h3>
      {/* Regular loop through query data */}
@@ -18,8 +66,8 @@ const ProjectList = ({data}) => {
     <h2>{node.title}</h2>
     <p>{node.description}</p>
     <div className="button-wrap">
-    <StyledLink to={`/projects/${node.slug}/`}>More Info</StyledLink>
-    <a href="javascript:void(0)">View site</a>
+    {/* <StyledLink to={`/projects/${node.slug}/`}>More Info</StyledLink> */}
+    <a href="link">View site</a>
     <StyledLink to={`/category/${node.category.category}`}>{node.category.category}</StyledLink>
     </div>
     </div>
@@ -36,6 +84,211 @@ export default ProjectList
 const StyledProjectList = styled.aside`
   margin-left: 13rem;
   height: 100vh;
+
+
+/* Animation Start */
+
+
+
+.tube-upper.right{
+  position: absolute;
+          top: 0;
+          right: 0vmin;
+          width: 8vmin;
+          height: 4.5vmin;
+          background: linear-gradient(217deg, rgba(0,0,0,1) 9%, rgba(0,0,0,0.4290091036414566) 49%, rgba(0,0,0,1) 80%);
+      &:after{
+      content: "";
+      width: 10vmin;
+      height: 9vmin;
+      border-bottom-right-radius: 30px;
+      background: linear-gradient(217deg, rgba(89,83,83,1) 9%, rgba(133,129,129,0.4290091036414566) 49%, rgba(101,99,99,1) 80%);
+      position: absolute;
+      position: absolute;
+      top: 4.5vmin;
+      right: 0vmin;
+     }
+}
+.tube-upper.left{
+  z-index: -1;
+     width: 11vmin;
+      height: 11vmin;
+      border-top-left-radius: 30px;
+      background: linear-gradient(217deg, rgba(89,83,83,1) 9%, rgba(133,129,129,0.4290091036414566) 49%, rgba(101,99,99,1) 80%);
+      position: absolute;
+      position: absolute;
+      top: 4.5vmin;
+      left: 23vmin;
+      &:after{
+        content: "";
+      width: 2vmin;
+      height: 9vmin;
+      background: linear-gradient(50deg, rgba(89,83,83,1) 9%, rgba(133,129,129,0.4290091036414566) 49%, rgba(101,99,99,1) 80%);
+      position: absolute;
+      position: absolute;
+      top: 0;
+      right: -2vmin;
+      }
+}
+
+.tube.top{
+  z-index: -1;
+          overflow: hidden;
+          position: absolute;
+          box-shadow: 0px 0vmin 1.5vmin 0vmin #0ff;
+          background: linear-gradient(180deg, rgba(133,224,139,1) 0%, rgba(0,255,132,0.1) 29%, rgba(0,255,174,0.01) 61%, rgba(67,212,169,1) 100%);
+          top: 5vmin;
+          right: 10vmin;
+          height: 8vmin;
+          width: calc(100% - 46vmin);
+}
+
+.tube-goo.right{
+  position: absolute;
+  background: linear-gradient(180deg, rgba(133, 224, 139, 0.922) 6%, rgba(0,255,132,0) 80%);
+  top: -2vmin;
+          height: 10vmin;
+          width: 0.3vmin;
+          right: 0vmin;
+}
+.tube-goo.left{
+  position: absolute;
+  background: linear-gradient(90deg, rgba(133, 224, 139, 0.922) 6%, rgba(0,255,132,0) 80%);
+  top: -2vmin;
+          height: 10vmin;
+          width: 0.5vmin;
+          left: 0vmin;
+}
+
+.slime.top{
+  position: absolute;
+width: 100%;
+bottom: 0;
+height: 6vmin;
+background: linear-gradient(180deg, rgba(0,255,132,0) 10%, rgba(133,224,139,1) 20%);
+}
+
+.wave{
+  width: 50vmin;
+  position: absolute;
+  top: 0;
+  animation: wave 15s infinite linear;
+}
+.wave:nth-last-of-type(1){
+  /* animation-delay: 2s; */
+}
+.wave:nth-last-of-type(2){
+  animation-delay: 3s;
+}
+.wave:nth-last-of-type(3){
+  animation-delay: 5s;
+}
+.wave:nth-last-of-type(4){
+  animation-delay: 7s;
+}
+.wave:nth-last-of-type(5){
+  animation-delay: 10s;
+}
+.wave:nth-last-of-type(6){
+  animation-delay: 12s;
+}
+
+@keyframes wave {
+  0%{
+    top: -2vmin;
+    right:-40%;}
+    5%{
+    top: -2vmin;
+    right:-50%;}
+  45%{
+    top: -1vmin;
+    right:20%;}
+  70%{
+    top: 0vmin;
+    right:50%;}
+  100%{
+    top: 0vmin;
+    right:100%;}
+}
+
+@keyframes wave2 {
+  0%{
+    top: -20%;
+}
+  45%{
+    top: 20%;
+}
+  70%{
+    top: 40%;
+}
+  100%{
+    top: 100%;
+}
+}
+
+.tube.mid{
+  z-index: -1;
+          overflow: hidden;
+          position: absolute;
+          box-shadow: 0px 0vmin 1.5vmin 0vmin #0ff;
+          background: linear-gradient(90deg, rgba(133,224,139,1) 0%, rgba(0,255,132,0.1) 29%, rgba(0,255,174,0.01) 61%, rgba(67,212,169,1) 100%);
+          top: 15.5vmin;
+          left: 23.5vmin;
+          width: 10vmin;
+          height: 200%;
+}
+
+.tube.mid .wave{
+transform: rotate(270deg);
+left: -18vmin;
+  animation: wave2 10s infinite linear;
+  /* animation-delay: 15s; */
+}
+
+.tube.mid .wave:nth-last-of-type(1){
+  /* background-color: red; */
+  animation-delay: 0.2s;
+}
+.tube.mid .wave:nth-last-of-type(2){
+  animation-delay: 3s;
+}
+.tube.mid .wave:nth-last-of-type(3){
+  animation-delay: 5s;
+}
+.tube.mid .wave:nth-last-of-type(4){
+  animation-delay: 7s;
+}
+.tube.mid .wave:nth-last-of-type(5){
+  animation-delay: 10s;
+}
+.tube.mid .wave:nth-last-of-type(6){
+  animation-delay: 12s;
+}
+.slime.mid{
+  position: absolute;
+height: 100%;
+top: 0;
+right: 0;
+width: 6vmin;
+background: linear-gradient(90deg, rgba(0,255,132,0) 10%, rgba(133,224,139,1) 20%);
+}
+
+
+/* Animation End */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 h3{
   padding: 8rem 0 3rem;
 }

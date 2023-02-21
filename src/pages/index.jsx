@@ -12,7 +12,6 @@ const IndexPage = ({data}) => {
 
   return (
     <StyledHomeMenu >
-      <helmet> </helmet>
       <SideMenu/>
      {data.allContentfulPerson.nodes.map(node => (
   <div key={node.id} className="project-container">
@@ -170,16 +169,16 @@ button{
   background: #232323;
   &:hover{
     /* color: red; */
-    transition: 1s;
+    transition: 0.5s;
     box-shadow:
-    0 0 3px #fff,
+    0 0 12px #fff,
+    0 0 1px #fff,
     0 0 5px #fff,
-    0 0 11px #fff,
-    0 0 32px #0fa,
-    0 0 42px #0fa,
-    0 0 72px #0fa,
-    0 0 90px #0fa,
-    0 0 120px #0fa;
+    0 0 12px #0fa,
+    0 0 20px #0fa,
+    0 0 20px #0fa,
+    0 0 30px #0fa,
+    0 0 30px #0fa;
   }
 }
 h2{

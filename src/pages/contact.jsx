@@ -3,10 +3,19 @@ import styled from 'styled-components';
 import SideMenu from "../components/sidemenu"
 import { graphql } from "gatsby"
 // import { Link } from "gatsby";
+import TurtleImg from '../images/turtle.svg'
 
 const ContactPage = ({data}) => {
     return (
         <StyledContact>
+
+<div className="tube-upper right"></div>
+<div className="drip"></div>
+<div className="drip"></div>
+<div className="drip"></div>
+<div className="drip"></div>
+
+<img src={TurtleImg} alt="turtle" />
             <SideMenu/>
         
          <section>
@@ -38,6 +47,129 @@ const StyledContact = styled.aside`
   margin-left: 13rem;
   height: 100vh;
 padding-top: 10rem;
+box-sizing: border-box;
+
+img{
+  height: 8vmin;
+  /* width: 5vmin; */
+  position: absolute;
+  bottom: 0;
+  left: 31vmin;
+}
+
+
+.tube-upper.right{
+  position: absolute;
+          top: 0;
+          left: 23vmin;
+          width: 11vmin;
+          height: 4.5vmin;
+          background: linear-gradient(217deg, rgba(0,0,0,1) 9%, rgba(0,0,0,0.4290091036414566) 49%, rgba(0,0,0,1) 80%);
+      &:after{
+      content: "";
+      width: 10vmin;
+      height: 13vmin;
+      border-bottom-right-radius: 30px;
+      background: linear-gradient(217deg, rgba(89,83,83,1) 100%, rgba(133,129,129,0.4290091036414566) 49%, rgba(101,99,99,1) 80%);
+      position: absolute;
+      position: absolute;
+      top: 3vmin;
+      right: 0vmin;
+      transform: rotate(90deg);
+     }
+}
+
+
+
+.drip{
+  background-color: rgba(133, 224, 139, 0.922);
+  top: 5.5vmin;
+  left: 30vmin;
+    border-radius: 50%;
+    height: 3vmin;
+    width: 3vmin;
+    position: absolute;
+    animation: drip 4s linear infinite;
+    z-index: -2;
+
+}
+
+.drip:nth-last-of-type(2){
+animation-delay: 1s;
+}
+.drip:nth-last-of-type(3){
+animation-delay: 4s;
+}
+.drip:nth-last-of-type(3){
+animation-delay: 1.3s;
+}
+.drip:nth-last-of-type(4){
+animation-delay: 5s;
+}
+
+
+@keyframes drip {
+  0%{
+    top: 8vmin;
+    left: 23.5vmin;
+  }
+  55%{
+    top: 10vmin;
+    left: 35.5vmin;
+
+    opacity: 1;
+    animation-timing-function: cubic-bezier(0.24, 0, 0.76, 0.14);
+  }
+  
+  60%{
+    animation-timing-function: ease-in;
+    top: 11vmin;
+   height: 5vmin;
+    width: 5vmin;
+    /* animation-timing-function: ease-out; */
+  }
+
+  70%{
+    opacity: 1;
+    animation-timing-function: linear;
+
+    /* width: 30px; */
+    /* height: 30px; */
+    height: 4.5vmin;
+    width: 4.5vmin;
+  }
+  90%{
+    top: 90vh;
+    opacity: 0.5;
+    height: 4vmin;
+    width: 4vmin;
+  }
+  100%{
+    top: 85vh;
+    width: 0.5vmin;
+    height: 0.5vmin;
+    opacity: 0;
+    animation-timing-function: ease-out;
+    
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 section{
     display: flex;
@@ -114,8 +246,194 @@ color: white;
   flex-direction: column;
 
 }
+
+@keyframes drip {
+  0%{
+    top: 8vmin;
+    left: 23.5vmin;
+  }
+  55%{
+    top: 10vmin;
+    left: 35.5vmin;
+
+    opacity: 1;
+    animation-timing-function: cubic-bezier(0.24, 0, 0.76, 0.14);
+  }
+  
+  60%{
+    animation-timing-function: ease-in;
+    top: 11vmin;
+   height: 5vmin;
+    width: 5vmin;
+    /* animation-timing-function: ease-out; */
+  }
+
+  70%{
+    opacity: 1;
+    animation-timing-function: linear;
+
+    /* width: 30px; */
+    /* height: 30px; */
+    height: 4.5vmin;
+    width: 4.5vmin;
+  }
+  90%{
+    top: 92vh;
+    opacity: 0.5;
+    height: 4vmin;
+    width: 4vmin;
+  }
+  100%{
+    top: 85vh;
+    width: 0.5vmin;
+    height: 0.5vmin;
+    opacity: 0;
+    animation-timing-function: ease-out;
+    
+  }
+
+
+}
 }
 
+
+@media screen and (max-width: 750px) {
+@keyframes drip {
+0%{
+  top: 8vmin;
+  left: 23.5vmin;
+}
+55%{
+  top: 10vmin;
+  left: 35.5vmin;
+
+  opacity: 1;
+  animation-timing-function: cubic-bezier(0.24, 0, 0.76, 0.14);
+}
+
+60%{
+  animation-timing-function: ease-in;
+  top: 11vmin;
+ height: 5vmin;
+  width: 5vmin;
+}
+
+70%{
+  opacity: 1;
+  animation-timing-function: linear;
+  height: 4.5vmin;
+  width: 4.5vmin;
+}
+90%{
+  top: 93vh;
+  opacity: 0.5;
+  height: 4vmin;
+  width: 4vmin;
+}
+100%{
+  top: 90vh;
+  width: 0.5vmin;
+  height: 0.5vmin;
+  opacity: 0;
+  animation-timing-function: ease-out;
+  
+}
+}
+}
+
+@media screen and (max-width: 620px) {
+@keyframes drip {
+0%{
+  top: 8vmin;
+  left: 23.5vmin;
+}
+55%{
+  top: 10vmin;
+  left: 35.5vmin;
+
+  opacity: 1;
+  animation-timing-function: cubic-bezier(0.24, 0, 0.76, 0.14);
+}
+
+60%{
+  animation-timing-function: ease-in;
+  top: 11vmin;
+ height: 5vmin;
+  width: 5vmin;
+}
+
+70%{
+  opacity: 1;
+  animation-timing-function: linear;
+  height: 4.5vmin;
+  width: 4.5vmin;
+}
+90%{
+  top: 95vh;
+  opacity: 0.5;
+  height: 4vmin;
+  width: 4vmin;
+}
+100%{
+  top: 90vh;
+  width: 0.5vmin;
+  height: 0.5vmin;
+  opacity: 0;
+  animation-timing-function: ease-out;
+  
+}
+}
+}
+
+
+
+@media screen and (max-width: 350px) {
+
+
+@keyframes drip {
+0%{
+  top: 8vmin;
+  left: 23.5vmin;
+}
+55%{
+  top: 10vmin;
+  left: 35.5vmin;
+
+  opacity: 1;
+  animation-timing-function: cubic-bezier(0.24, 0, 0.76, 0.14);
+}
+
+60%{
+  animation-timing-function: ease-in;
+  top: 11vmin;
+ height: 5vmin;
+  width: 5vmin;
+}
+
+70%{
+  opacity: 1;
+  animation-timing-function: linear;
+  height: 4.5vmin;
+  width: 4.5vmin;
+}
+90%{
+  top: 97vh;
+  opacity: 0.5;
+  height: 4vmin;
+  width: 4vmin;
+}
+100%{
+  top: 90vh;
+  width: 0.5vmin;
+  height: 0.5vmin;
+  opacity: 0;
+  animation-timing-function: ease-out;
+  
+}
+
+
+}
+}
 `
 
 
