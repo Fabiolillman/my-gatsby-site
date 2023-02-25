@@ -1,6 +1,7 @@
 import * as React from "react"
 import SideMenu from "../components/sidemenu"
 import styled from 'styled-components';
+import '../index.css';
 
 
 

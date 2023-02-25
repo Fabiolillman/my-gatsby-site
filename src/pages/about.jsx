@@ -2,6 +2,7 @@ import React from "react"
 import styled from 'styled-components';
 import SideMenu from "../components/sidemenu"
 import { graphql } from "gatsby"
+import '../index.css';
 // Used to display rich text to correct format
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 const AboutPage = ({data}) => {

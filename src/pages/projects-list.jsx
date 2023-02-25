@@ -1,5 +1,6 @@
 import { Link, graphql } from "gatsby"
 import * as React from "react"
+import '../index.css';
 import styled from 'styled-components';
 import SideMenu from "../components/sidemenu";
 

@@ -2,6 +2,7 @@ import * as React from "react"
 import { graphql, Link } from "gatsby"
 import styled from 'styled-components';
 import SideMenu from "../components/sidemenu"
+import '../index.css';
 
 
 const SingleProjectsPage = ({data}) => { 

@@ -2,6 +2,7 @@ import React from "react"
 import styled from 'styled-components';
 import SideMenu from "../components/sidemenu"
 import { graphql } from "gatsby"
+import '../index.css';
 // import { Link } from "gatsby";
 import TurtleImg from '../images/turtle.svg'
 

@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import * as React from "react"
 import styled from 'styled-components';
 import SideMenu from "../components/sidemenu";
+import '../index.css';
 
 const CategoryListPage = ({data}) => {
 
