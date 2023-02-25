@@ -14,7 +14,7 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: [{
-    resolve: 'gatsby-source-contentful',
+    resolve: 'gatsby-plugin-styled-components',
     options: {
       "accessToken": process.env.CONTENTFUL_ACCESS_TOKEN,
       "spaceId": process.env.CONTENTFUL_SPACE_ID
