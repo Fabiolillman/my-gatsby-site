@@ -68,8 +68,16 @@ const ProjectList = ({data}) => {
     <p>{node.description}</p>
     <div className="button-wrap">
     {/* <StyledLink to={`/projects/${node.slug}/`}>More Info</StyledLink> */}
-    <a href="link">View site</a>
-    <StyledLink to={`/category/${node.category.category}`}>{node.category.category}</StyledLink>
+    {/* <a href="link">View site</a> */}
+    {node.githublink &&
+          <a href={node.githublink}>View code</a>
+        }
+    {node.linksToPage &&
+          <a href={node.linksToPage}>View Site</a>
+        }
+
+    {/* <a href={node.githublink}>View code</a> */}
+    {/* <StyledLink to={`/category/${node.category.category}`}>{node.category.category}</StyledLink> */}
     </div>
     </div>
   </div>
@@ -175,9 +183,7 @@ background: linear-gradient(180deg, rgba(0,255,132,0) 10%, rgba(133,224,139,1) 2
   top: 0;
   animation: wave 15s infinite linear;
 }
-.wave:nth-last-of-type(1){
-  /* animation-delay: 2s; */
-}
+
 .wave:nth-last-of-type(2){
   animation-delay: 3s;
 }
@@ -236,7 +242,7 @@ background: linear-gradient(180deg, rgba(0,255,132,0) 10%, rgba(133,224,139,1) 2
           top: 15.5vmin;
           left: 23.5vmin;
           width: 10vmin;
-          height: 200%;
+          height: 166vh;
 }
 
 .tube.mid .wave{
@@ -315,6 +321,16 @@ img{
   height: 18rem;
   position: relative;
 }
+.text-wrap p{
+  /* border: 1px solid white; */
+  /* width: 25rem;
+  height: 18rem;
+  position: relative; */
+  /* line-height: 3rem; */
+  font-size: 1.3rem;
+  /* word-spacing: 3px; */
+  font-family: 'Times New Roman', Times, serif;
+}
 article h2{
   padding-bottom: 1rem;  
 }
@@ -332,9 +348,9 @@ p, h2{
 }
 
 .button-wrap a{
- border: 1px solid black;
+ /* border: 4px solid white; */
 background-color: white;
-width: 10rem;
+min-width: 9rem;
 height: 3.5rem;
 font-size: 1.2rem;
 text-decoration: none;
@@ -351,7 +367,9 @@ color: black;
 @media screen and (max-width: 950px) {
  margin-left: 0;
  width: 100%;
-
+ .tube.mid{
+          height: 305vh;
+}
  .project-container{
   justify-content: center;
   align-items: center;
@@ -364,14 +382,33 @@ color: black;
  }
 
 }
+
+@media screen and (max-width: 680px) {
+  .tube.mid{
+          height: 310vh;
+}
+}
+
+
 @media screen and (max-width: 500px) {
  .text-wrap, img{
-  width: 100%;
+  width: 95%;
 }
 .button-wrap a{
   font-size: 0.8rem;
+min-width: 25vmin;
+height: 15vmin;
+line-height: 15vmin;
 }
 }
+
+@media screen and (max-width: 370px) {
+.text-wrap{
+  height: auto;
+  padding-bottom: 3rem;
+}
+}
+
 `
 
 const StyledLink = styled(Link)`
@@ -396,6 +433,8 @@ query MyQuery {
       slug
       skill
       id
+      linksToPage
+      githublink
       image {
         url
       }
