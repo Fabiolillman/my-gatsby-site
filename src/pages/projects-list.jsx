@@ -1,4 +1,4 @@
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import * as React from "react"
 import '../index.css';
 import styled from 'styled-components';
@@ -411,22 +411,22 @@ line-height: 15vmin;
 
 `
 
-const StyledLink = styled(Link)`
-//add this for actual publishing, and remove category link
-border: 1px solid black;
-background-color: white;
-width: 10rem;
-height: 3.5rem;
-font-size: 1.2rem;
-text-decoration: none;
-text-align: center;
-line-height: 3.5rem;
-font-family: 'Michroma';
-color: black;
-`
+// const StyledLink = styled(Link)`
+// //add this for actual publishing, and remove category link
+// border: 1px solid black;
+// background-color: white;
+// width: 10rem;
+// height: 3.5rem;
+// font-size: 1.2rem;
+// text-decoration: none;
+// text-align: center;
+// line-height: 3.5rem;
+// font-family: 'Michroma';
+// color: black;
+// `
 export const query = graphql`
 query MyQuery {
-  allContentfulProjects {
+  allContentfulProjects(sort: {title: DESC}) {
     nodes {
       title
       description
