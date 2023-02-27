@@ -83,7 +83,7 @@ const IndexPage = ({data}) => {
           <h2>{node.title}</h2>
           <div className="btn-wrap">
             <div className="background-neon"></div>
-          <button>Contact me</button>
+          <button className="contact-btn" aria-label="Send">Contact me</button>
           </div>
         </div>
       </aside>
@@ -157,7 +157,7 @@ h2{
   animation: neon-background 2s infinite alternate;
 }
 
-button{
+.contact-btn{
   font-size: 1.5rem;
   position: absolute;
   top: 50%;
