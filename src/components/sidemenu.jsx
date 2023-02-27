@@ -145,6 +145,7 @@ svg{
 @media screen and (max-width: 950px) {
 z-index: 99;
 width: 50%;
+background-color: transparent;
 position: fixed;
 height: 55px;
 width: 55px;
@@ -152,14 +153,16 @@ left: 0;
 top: 0;
 
   .hamburger-button {
+    border: none;
+    margin-top: 0.5rem;
     background-repeat: no-repeat;
     background-color: transparent;
     background-size: cover;
     //Changes img back to hamburger after screen resize
     background-image: ${({isOpen}) => isOpen ? `url(${Cross})` : `url(${Hamburger})`};
     transition: background-image 0.3s;
-    width: 50px;
-    height: 50px;
+    width: 2.5rem;
+    height: 2.5rem;
     display: block;
     z-index: 100;
   }
@@ -205,9 +208,10 @@ justify-content: space-between;
 }
 `
 const StyledLink = styled(Link)`
-font-size: 1.6rem;
+font-size: 1.4rem;
 color: white;
 text-decoration: none;
+font-family: 'Michroma', sans-serif;
 ::before{
     content: '<';
 }

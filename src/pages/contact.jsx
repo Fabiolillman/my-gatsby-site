@@ -5,6 +5,8 @@ import { graphql } from "gatsby"
 import '../index.css';
 // import { Link } from "gatsby";
 import TurtleImg from '../images/turtle.svg'
+import LinkedinIcon from '../images/linkedin-icon.svg'
+import EmailIcon from '../images/email-icon.svg'
 
 const ContactPage = ({data}) => {
     return (
@@ -32,9 +34,10 @@ const ContactPage = ({data}) => {
         <button>SEND</button>
         {data && data.allContentfulLinks && data.allContentfulLinks.nodes.map(node => (
           <div key={node.id} className="contact-container">
-         <p>{node.email}</p>
+         {/* <a href={node.linkedin} className="email-btn">{node.email}</a> */}
+         <a href={node.linkedin} target="_blank" rel="noreferrer" className="email-btn" aria-label="Link to email form"></a>
          <p>{node.phone}</p>
-         <a href={node.linkedin} className="Linkedin">Linkedin</a>
+         <a href={node.linkedin} target="_blank" rel="noreferrer" aria-label="Link to linkedin" className="linkedin-btn"></a>
          </div>
         ))}
         </form>
@@ -49,6 +52,27 @@ const StyledContact = styled.aside`
   height: 100vh;
 padding-top: 10rem;
 box-sizing: border-box;
+
+
+.linkedin-btn{
+  width: 4rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-image: url(${LinkedinIcon});
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.email-btn{
+  width: 4rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-image: url(${EmailIcon});
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+
 
 img{
   height: 8vmin;
@@ -224,6 +248,14 @@ text-align: center;
 font-family: 'Michroma';
 bottom: 0;
 color: black;
+box-shadow: 0px 0px 6px 0px rgba(249, 249, 249, 0.75);
+&:hover{
+  box-shadow: 0px 0px 6px 0px rgba(118, 246, 139, 0.75);
+  transition: 0.3s;
+  border: 1px solid green;
+  background-color: black;
+  color: white;
+}
 }
 
 .contact-container{

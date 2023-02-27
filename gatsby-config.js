@@ -13,11 +13,29 @@ module.exports = {
     description: `Headless CMS portfolio website`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: [{
-    resolve: 'gatsby-source-contentful',
-    options: {
-      "accessToken": process.env.CONTENTFUL_ACCESS_TOKEN,
-      "spaceId": process.env.CONTENTFUL_SPACE_ID
+  plugins: [
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: process.env.CONTENTFUL_SPACE_ID
+      }
+    },
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-image",
+    {
+      resolve: "gatsby-plugin-postcss",
+      options: {
+        postCssPlugins: [
+          require(`autoprefixer`)()
+        ]
+      }
+    },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "static/favicon.png"
+      }
     }
-  },"gatsby-plugin-styled-components", "gatsby-plugin-image"]
+  ]
 };

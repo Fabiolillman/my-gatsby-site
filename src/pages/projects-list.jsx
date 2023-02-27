@@ -70,10 +70,10 @@ const ProjectList = ({data}) => {
     {/* <StyledLink to={`/projects/${node.slug}/`}>More Info</StyledLink> */}
     {/* <a href="link">View site</a> */}
     {node.githublink &&
-          <a href={node.githublink}>View code</a>
+          <a href={node.githublink} target="_blank" rel="noreferrer" aria-label="Link to github code">View code</a>
         }
     {node.linksToPage &&
-          <a href={node.linksToPage}>View Site</a>
+          <a href={node.linksToPage} target="_blank" rel="noreferrer" aria-label="Link to project live server">View Site</a>
         }
 
     {/* <a href={node.githublink}>View code</a> */}
@@ -348,7 +348,7 @@ p, h2{
 }
 
 .button-wrap a{
- /* border: 4px solid white; */
+ border: 1px solid white;
 background-color: white;
 min-width: 9rem;
 height: 3.5rem;
@@ -358,6 +358,14 @@ text-align: center;
 line-height: 3.5rem;
 font-family: 'Michroma';
 color: black;
+box-shadow: 0px 0px 6px 0px rgba(249, 249, 249, 0.75);
+&:hover{
+  box-shadow: 0px 0px 6px 0px rgba(118, 246, 139, 0.75);
+  transition: 0.3s;
+  border: 1px solid green;
+  background-color: black;
+  color: white;
+}
 }
 @media screen and (max-width: 1000px) {
 .button-wrap a{
