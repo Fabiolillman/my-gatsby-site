@@ -236,7 +236,7 @@ textarea{
   border: none;
 }
 
-button{
+form button{
 margin: 1.3rem auto;
 border: 1px solid black;
 background-color: white;
