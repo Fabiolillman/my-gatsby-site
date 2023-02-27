@@ -31,7 +31,7 @@ const ContactPage = ({data}) => {
         <input type="text" id="email" required/>
         <label htmlFor="message">Message</label>
         <textarea type="text-field" id="message" cols="30" rows="10" required/>
-        <button>SEND</button>
+        <button type="submit" aria-label="Submit form">SEND</button>
         {data && data.allContentfulLinks && data.allContentfulLinks.nodes.map(node => (
           <div key={node.id} className="contact-container">
          {/* <a href={node.linkedin} className="email-btn">{node.email}</a> */}
@@ -236,7 +236,7 @@ textarea{
   border: none;
 }
 
-form button{
+section button{
 margin: 1.3rem auto;
 border: 1px solid black;
 background-color: white;

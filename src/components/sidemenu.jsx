@@ -156,7 +156,8 @@ top: 0;
     border: none;
     margin-top: 0.5rem;
     background-repeat: no-repeat;
-    background-color: transparent;
+    background-color: ${({isOpen}) => isOpen ? `#181717` : `#232323`};
+    border: 1px solid #181717;
     background-size: cover;
     //Changes img back to hamburger after screen resize
     background-image: ${({isOpen}) => isOpen ? `url(${Cross})` : `url(${Hamburger})`};
