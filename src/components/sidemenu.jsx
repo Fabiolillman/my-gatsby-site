@@ -142,6 +142,8 @@ svg{
 .hamburger-button {
     display: none;
   }
+
+
 @media screen and (max-width: 950px) {
 z-index: 99;
 width: 50%;
@@ -207,7 +209,71 @@ justify-content: space-between;
     /* transform: rotate(0deg); */
 }
 }
+
+
+@media (max-width: 1024px) and (max-height: 600px) {
+z-index: 99;
+width: 50%;
+background-color: transparent;
+position: fixed;
+height: 55px;
+width: 55px;
+left: 0;
+top: 0;
+
+  .hamburger-button {
+    border: none;
+    margin-top: 0.5rem;
+    background-repeat: no-repeat;
+    background-color: ${({isOpen}) => isOpen ? `#181717` : `#232323`};
+    border: 1px solid #181717;
+    background-size: cover;
+    //Changes img back to hamburger after screen resize
+    background-image: ${({isOpen}) => isOpen ? `url(${Cross})` : `url(${Hamburger})`};
+    transition: background-image 0.3s;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: block;
+    z-index: 100;
+  }
+
+  .hamburger-button.open + .hide-nav-wrap {
+display: block;
+width: 13rem;
+position: fixed;
+height: 100vh;
+left: 0;
+top: 0;
+display: flex;
+background-color: #181717;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;    
+  }
+
+  //Blur the 2'nd half of the screen 
+
+
+  .hide-nav-wrap{
+    display: none;
+
+  }
+  .link-wrap {
+    padding-top: 2rem;
+    height: 60%;
+  }
+
+  .hamburger-button:not(.open) {
+    /* styles for hamburger button when menu is not open */
+    /* background-color: red; */
+    /* transform: rotate(0deg); */
+}
+}
+
+
 `
+
+
 const StyledLink = styled(Link)`
 font-size: 1.4rem;
 color: white;
@@ -220,5 +286,7 @@ font-family: 'Michroma', sans-serif;
     content: '/>';
 }
 `
+
+
 
 export default SideMenu

@@ -468,6 +468,13 @@ color: white;
 
 }
 }
+
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  padding-top: 0rem;
+  overflow: hidden;
+}
+
 `
 
 

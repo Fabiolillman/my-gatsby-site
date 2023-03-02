@@ -416,6 +416,20 @@ line-height: 15vmin;
   padding-bottom: 3rem;
 }
 }
+@media (max-width: 1280px) and (max-height: 800px) {
+  .tube.mid{
+          height: 200%;
+}
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  padding-right: 1rem;
+  .tube.mid{
+          height: 272%;
+}
+}
+
+
+}
 
 `
 

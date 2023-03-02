@@ -1,6 +1,6 @@
-const path = require('path')
+// const path = require('path')
 
-exports.createPages = async({graphql, actions}) =>{
+// exports.createPages = async({graphql, actions}) =>{
 
 // const { data: blogPostData} = await graphql(`
 // query getAllSlugs {
@@ -73,4 +73,4 @@ exports.createPages = async({graphql, actions}) =>{
 //     })
 // })
 
-}
+// }

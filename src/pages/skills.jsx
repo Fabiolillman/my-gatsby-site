@@ -219,6 +219,17 @@ img{
 }
 }
 
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  padding-top: 2rem;
+  .tube.mid{
+          height: 130%;
+}
+}
+
+@media (max-width: 1280px) and (max-height: 800px) {
+  padding-top: 2rem;
+}
 `
 
 export const query = graphql`

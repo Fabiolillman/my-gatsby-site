@@ -438,6 +438,27 @@ img{
     opacity: 1;
   }
 }
+
+
+@media (max-width: 1024px) and (max-height: 600px) {
+.container{
+  margin: auto;
+}
+}
+
+@media (max-width: 1280px) and (max-height: 800px) {
+  height: 100vh;
+  padding-top: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+.container{
+  margin: auto;
+}
+.pfp-wrap{
+  height: 33rem;
+}
+}
+
 `
 
 
