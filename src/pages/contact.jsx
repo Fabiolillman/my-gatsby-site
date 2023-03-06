@@ -36,7 +36,7 @@ const ContactPage = ({data}) => {
         {data && data.allContentfulLinks && data.allContentfulLinks.nodes.map(node => (
           <div key={node.id} className="contact-container">
          {/* <a href={node.linkedin} className="email-btn">{node.email}</a> */}
-         <a href={node.linkedin} target="_blank" rel="noreferrer" className="email-btn" aria-label="Link to email form"></a>
+         <a href='' className="email-btn" aria-label="Link to email form"></a>
          <p>{node.phone}</p>
          <a href={node.linkedin} target="_blank" rel="noreferrer" aria-label="Link to linkedin" className="linkedin-btn"></a>
          </div>
@@ -77,7 +77,6 @@ box-sizing: border-box;
 
 img{
   height: 8vmin;
-  /* width: 5vmin; */
   position: absolute;
   bottom: 0;
   left: 31vmin;
@@ -474,6 +473,71 @@ color: white;
   padding-top: 0rem;
   overflow: hidden;
 }
+
+
+
+@media  (max-height: 676px) {
+  padding-top: 0rem;
+
+  section{
+    padding: 1rem;
+}
+  img{
+  left: 40vmin;
+}
+.tube-upper.right{
+          left: 32vmin; 
+}
+
+.drip{
+  left: 39vmin;
+}
+
+@keyframes drip {
+  0%{
+    top: 8vmin;
+    left: 32.5vmin;
+  }
+  55%{
+    top: 10vmin;
+    left: 44.5vmin;
+
+    opacity: 1;
+    animation-timing-function: cubic-bezier(0.24, 0, 0.76, 0.14);
+  }
+  
+  60%{
+    animation-timing-function: ease-in;
+    top: 11vmin;
+   height: 5vmin;
+    width: 5vmin;
+    /* animation-timing-function: ease-out; */
+  }
+
+  70%{
+    opacity: 1;
+    animation-timing-function: linear;
+    height: 4.5vmin;
+    width: 4.5vmin;
+  }
+  90%{
+    top: 90vh;
+    opacity: 0.5;
+    height: 4vmin;
+    width: 4vmin;
+  }
+  100%{
+    top: 85vh;
+    width: 0.5vmin;
+    height: 0.5vmin;
+    opacity: 0;
+    animation-timing-function: ease-out;
+  }
+
+}
+
+}
+
 
 `
 
