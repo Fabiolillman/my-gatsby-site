@@ -100,7 +100,8 @@ const StyledProjectList = styled.aside`
 
 
 .tube-upper.right{
-  position: absolute;
+  position: fixed;
+  z-index: -1;
           top: 0;
           right: 0vmin;
           width: 8vmin;
@@ -113,7 +114,6 @@ const StyledProjectList = styled.aside`
       border-bottom-right-radius: 30px;
       background: linear-gradient(217deg, rgba(89,83,83,1) 9%, rgba(133,129,129,0.4290091036414566) 49%, rgba(101,99,99,1) 80%);
       position: absolute;
-      position: absolute;
       top: 4.5vmin;
       right: 0vmin;
      }
@@ -124,8 +124,7 @@ const StyledProjectList = styled.aside`
       height: 11vmin;
       border-top-left-radius: 30px;
       background: linear-gradient(217deg, rgba(89,83,83,1) 9%, rgba(133,129,129,0.4290091036414566) 49%, rgba(101,99,99,1) 80%);
-      position: absolute;
-      position: absolute;
+      position: fixed;
       top: 4.5vmin;
       left: 23vmin;
       &:after{
@@ -133,7 +132,6 @@ const StyledProjectList = styled.aside`
       width: 2vmin;
       height: 9vmin;
       background: linear-gradient(50deg, rgba(89,83,83,1) 9%, rgba(133,129,129,0.4290091036414566) 49%, rgba(101,99,99,1) 80%);
-      position: absolute;
       position: absolute;
       top: 0;
       right: -2vmin;
@@ -143,7 +141,7 @@ const StyledProjectList = styled.aside`
 .tube.top{
   z-index: -1;
           overflow: hidden;
-          position: absolute;
+          position: fixed;
           box-shadow: 0px 0vmin 1.5vmin 0vmin #0ff;
           background: linear-gradient(180deg, rgba(133,224,139,1) 0%, rgba(0,255,132,0.1) 29%, rgba(0,255,174,0.01) 61%, rgba(67,212,169,1) 100%);
           top: 5vmin;
@@ -236,7 +234,7 @@ background: linear-gradient(180deg, rgba(0,255,132,0) 10%, rgba(133,224,139,1) 2
 .tube.mid{
   z-index: -1;
           overflow: hidden;
-          position: absolute;
+          position: fixed;
           box-shadow: 0px 0vmin 1.5vmin 0vmin #0ff;
           background: linear-gradient(90deg, rgba(133,224,139,1) 0%, rgba(0,255,132,0.1) 29%, rgba(0,255,174,0.01) 61%, rgba(67,212,169,1) 100%);
           top: 15.5vmin;
@@ -375,8 +373,18 @@ box-shadow: 0px 0px 6px 0px rgba(249, 249, 249, 0.75);
 @media screen and (max-width: 950px) {
  margin-left: 0;
  width: 100%;
+ .tube-upper.left{
+      left: 5vmin;
+}
+ 
+.tube.top{
+          width: calc(100% - 28vmin);
+}
  .tube.mid{
-          height: 305vh;
+          left: 5.5vmin;
+}
+h3{
+  padding: 3rem 0 3rem;
 }
  .project-container{
   justify-content: center;
@@ -388,7 +396,6 @@ box-shadow: 0px 0px 6px 0px rgba(249, 249, 249, 0.75);
   margin-right: 0;
   margin-bottom: 2rem;
  }
-
 }
 
 @media screen and (max-width: 680px) {

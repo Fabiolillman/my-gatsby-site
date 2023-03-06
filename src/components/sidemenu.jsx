@@ -202,16 +202,10 @@ justify-content: space-between;
     padding-top: 2rem;
     height: 60%;
   }
-
-  .hamburger-button:not(.open) {
-    /* styles for hamburger button when menu is not open */
-    /* background-color: red; */
-    /* transform: rotate(0deg); */
-}
 }
 
 
-@media (max-width: 1024px) and (max-height: 600px) {
+@media  (max-height: 750px) {
 z-index: 99;
 width: 50%;
 background-color: transparent;
@@ -253,7 +247,6 @@ justify-content: space-between;
 
   //Blur the 2'nd half of the screen 
 
-
   .hide-nav-wrap{
     display: none;
 
@@ -262,13 +255,8 @@ justify-content: space-between;
     padding-top: 2rem;
     height: 60%;
   }
+}
 
-  .hamburger-button:not(.open) {
-    /* styles for hamburger button when menu is not open */
-    /* background-color: red; */
-    /* transform: rotate(0deg); */
-}
-}
 
 
 `
