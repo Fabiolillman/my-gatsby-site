@@ -77,14 +77,16 @@ box-sizing: border-box;
 
 img{
   height: 8vmin;
-  position: absolute;
+  position: fixed;
+  z-index: -1;
   bottom: 0;
   left: 31vmin;
 }
 
 
 .tube-upper.right{
-  position: absolute;
+  position: fixed;
+  z-index: -1;
           top: 0;
           left: 23vmin;
           width: 11vmin;
@@ -96,7 +98,6 @@ img{
       height: 13vmin;
       border-bottom-right-radius: 30px;
       background: linear-gradient(217deg, rgba(89,83,83,1) 100%, rgba(133,129,129,0.4290091036414566) 49%, rgba(101,99,99,1) 80%);
-      position: absolute;
       position: absolute;
       top: 3vmin;
       right: 0vmin;
@@ -113,7 +114,7 @@ img{
     border-radius: 50%;
     height: 3vmin;
     width: 3vmin;
-    position: absolute;
+    position: fixed;
     animation: drip 4s linear infinite;
     z-index: -2;
 
@@ -272,7 +273,7 @@ color: white;
 }
 
 @media screen and (max-width: 950px) {
-
+padding-top: 3rem;
   margin-left: 0;
   width: 100%;
   .contact-container{
@@ -470,14 +471,20 @@ color: white;
 
 
 @media (max-width: 1024px) and (max-height: 600px) {
-  padding-top: 0rem;
-  overflow: hidden;
+  padding-top: 3rem;
+  /* overflow: hidden; */
 }
 
+@media (min-width: 355px) and (min-height: 575px) and (max-width: 500px) {
+  /* padding-top: 3rem; */
+  section{
+    padding: 1rem;
+}
+}
 
-
-@media  (max-height: 676px) {
+@media (min-height: 576px) and (max-height: 781px) and (min-width: 951px) {
   padding-top: 0rem;
+  
 
   section{
     padding: 1rem;

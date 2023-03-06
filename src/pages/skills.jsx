@@ -106,7 +106,7 @@ box-sizing: border-box;
 .tube.mid{
   z-index: -1;
           overflow: hidden;
-          position: absolute;
+          position: fixed;
           box-shadow: 0px 0vmin 1.5vmin 0vmin #0ff;
           background: linear-gradient(90deg, rgba(133,224,139,1) 0%, rgba(0,255,132,0.1) 29%, rgba(0,255,174,0.01) 61%, rgba(67,212,169,1) 100%);
           top: 0;
