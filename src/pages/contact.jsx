@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useRef} from "react"
 import styled from 'styled-components';
 import SideMenu from "../components/sidemenu"
 import { graphql } from "gatsby"
@@ -7,8 +7,25 @@ import '../index.css';
 import TurtleImg from '../images/turtle.svg'
 import LinkedinIcon from '../images/linkedin-icon.svg'
 import EmailIcon from '../images/email-icon.svg'
+import emailjs from 'emailjs-com';
 
 const ContactPage = ({data}) => {
+
+  const form = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(process.env.REACT_APP_SERVICE, process.env.REACT_APP_REACT_APP_TEMPLATE, form.current, process.env.REACT_APP_EACT_APP_API)
+      .then((result) => {
+        console.log("IT WORKED")
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+      e.target.reset();
+  };
+
     return (
         <StyledContact>
 
@@ -24,23 +41,22 @@ const ContactPage = ({data}) => {
          <section>
          <h3>Contact</h3>
     
-        <form method="POST">
-        <label htmlFor="name">Name</label>
-        <input type="text" id="name" required/>
-        <label htmlFor="email">Email</label>
-        <input type="text" id="email" required/>
-        <label htmlFor="message">Message</label>
-        <textarea type="text-field" id="message" cols="30" rows="10" required/>
-        <button className="submit-btn" aria-label="Submit form">SEND</button>
-        {/* <button className="contact-btn" aria-label="Send">Contact me</button> */}
-        {data && data.allContentfulLinks && data.allContentfulLinks.nodes.map(node => (
-          <div key={node.id} className="contact-container">
-         {/* <a href={node.linkedin} className="email-btn">{node.email}</a> */}
-         <a href='' className="email-btn" aria-label="Link to email form"></a>
-         <p>{node.phone}</p>
-         <a href={node.linkedin} target="_blank" rel="noreferrer" aria-label="Link to linkedin" className="linkedin-btn"></a>
-         </div>
-        ))}
+         <form ref={form} onSubmit={sendEmail}>
+          <label htmlFor="name">Name</label>
+          <input type="text" id="name" required/>
+          <label htmlFor="email">Email</label>
+          <input type="text" id="email" required/>
+          <label htmlFor="message">Message</label>
+          <textarea type="text-field" id="message" cols="30" rows="10" required/>
+          <button className="submit-btn" aria-label="Submit form">SEND</button>
+          {data && data.allContentfulLinks && data.allContentfulLinks.nodes.map(node => (
+            <div key={node.id} className="contact-container">
+              {/* <a href='' className="email-btn" aria-label="Link to email form"></a> */}
+
+              <a href={node.linkedin} target="_blank" rel="noreferrer" aria-label="Link to linkedin" className="linkedin-btn"></a>
+              <p>{node.phone}</p>
+            </div>
+          ))}
         </form>
         </section>
         </StyledContact>
