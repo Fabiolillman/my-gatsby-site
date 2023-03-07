@@ -169,8 +169,9 @@ h3{
 }
 
 h2{
+  text-align: center;
   padding-top: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .skills-container{
     align-self: center;
@@ -205,7 +206,7 @@ img{
 @media screen and (max-width: 950px) {
  margin-left: 0;
  width: 100%;
-
+padding-top: 2rem;
  .skill-wrap{
     grid-template-columns:  1fr 1fr 1fr;
   width: 65%;
@@ -230,6 +231,7 @@ img{
 @media (max-width: 1280px) and (max-height: 800px) {
   padding-top: 2rem;
 }
+
 `
 
 export const query = graphql`
