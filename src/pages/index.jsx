@@ -4,6 +4,7 @@ import '../index.css';
 import styled from 'styled-components';
 import { graphql } from "gatsby"
 // import { useEffect } from "react";
+import { Link } from "gatsby";
 
 
 
@@ -83,7 +84,8 @@ const IndexPage = ({data}) => {
           <h2>{node.title}</h2>
           <div className="btn-wrap">
             <div className="background-neon"></div>
-          <button className="contact-btn" aria-label="Send">Contact me</button>
+          {/* <button className="contact-btn" aria-label="Send">Contact me</button> */}
+          <StyledLink to="/contact">Contact me</StyledLink>
           </div>
         </div>
       </aside>
@@ -96,6 +98,42 @@ const IndexPage = ({data}) => {
 
 export default IndexPage
 
+const StyledLink = styled(Link)`
+  font-size: 1.7rem;
+  position: absolute;
+
+  font-family: 'Roboto', sans-serif;
+
+
+
+  /* font-family: 'Michroma', sans-serif; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* text-align: center; */
+  width: 18rem;
+  height: 3rem;
+  color: white;
+  background: #232323;
+  text-decoration: none;
+  &:hover{
+    /* color: red; */
+    transition: 0.5s;
+    box-shadow:
+    0 0 12px #fff,
+    0 0 1px #fff,
+    0 0 5px #fff,
+    0 0 12px #0fa,
+    0 0 20px #0fa,
+    0 0 20px #0fa,
+    0 0 30px #0fa,
+    0 0 30px #0fa;
+  }
+`
 
 const StyledHomeMenu = styled.main`
 /* background-color: black; */
