@@ -101,27 +101,19 @@ export default IndexPage
 const StyledLink = styled(Link)`
   font-size: 1.7rem;
   position: absolute;
-
   font-family: 'Roboto', sans-serif;
-
-
-
-  /* font-family: 'Michroma', sans-serif; */
-
   display: flex;
   justify-content: center;
   align-items: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* text-align: center; */
   width: 18rem;
   height: 3rem;
   color: white;
   background: #232323;
   text-decoration: none;
   &:hover{
-    /* color: red; */
     transition: 0.5s;
     box-shadow:
     0 0 12px #fff,
