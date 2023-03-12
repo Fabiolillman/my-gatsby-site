@@ -217,9 +217,24 @@ padding-top: 2rem;
  .skill-wrap{
     grid-template-columns: 1fr 1fr;
   width: 65%;
+  gap: 1.25rem;
 }
 }
-
+@media screen and (max-width: 411px) {
+ .skill-wrap{
+  gap: 1rem;
+  padding: 3rem;
+}
+}
+@media screen and (max-width: 340px) {
+  .skill-wrap{
+/* overflow: hidden; */
+margin: 0;
+}
+ .skills-container h2{
+font-size: 1rem;
+}
+}
 
 @media (max-width: 1024px) and (max-height: 600px) {
   padding-top: 2rem;
