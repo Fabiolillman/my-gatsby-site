@@ -160,8 +160,8 @@ h3{
   gap: 2.25rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    padding: 2rem;
-  width: 55%;
+    padding: 2rem 0;
+  width: 50rem;
   margin: auto;
   background-color: rgba(0,0,0,0.34);
   border-radius: 10px;
@@ -171,7 +171,7 @@ h3{
 h2{
   text-align: center;
   padding-top: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .skills-container{
     align-self: center;
@@ -180,24 +180,24 @@ h2{
    justify-content: center;
    align-items: center;
    flex-direction: column;
-  width: 9rem;
-  height: 8.125rem;
+  width: 2rem;
+  /* height: 8.125rem; */
   /* background-color: yellow; */
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 
 }
 img{
-  max-width: 4.5rem;
-  max-height: 4.5rem;
+  max-width: 4rem;
+  max-height: 4rem;
 }
 
-@media screen and (max-width: 1300px) {
+/* @media screen and (max-width: 1300px) {
  .skill-wrap{
   width: 75%;
 }
-}
+} */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1010px) {
  .skill-wrap{
   width: 80%;
 }
@@ -208,31 +208,33 @@ img{
  width: 100%;
 padding-top: 2rem;
  .skill-wrap{
-    grid-template-columns:  1fr 1fr 1fr;
-  width: 65%;
+    /* grid-template-columns:  1fr 1fr 1fr; */
+  width: 85vw;
 }
 }
 
 @media screen and (max-width: 700px) {
  .skill-wrap{
-    grid-template-columns: 1fr 1fr;
-  width: 65%;
-  gap: 1.25rem;
+  gap: 24px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
 }
 }
-@media screen and (max-width: 411px) {
- .skill-wrap{
-  gap: 1rem;
-  padding: 3rem;
-}
-}
-@media screen and (max-width: 340px) {
+
+@media screen and (max-width: 520px) {
+
   .skill-wrap{
-/* overflow: hidden; */
-margin: 0;
+  gap: 12px;
+width: 100vw;
+justify-content: center;
 }
  .skills-container h2{
-font-size: 1rem;
+font-size: 0.8rem;
+}
+}
+@media screen and (max-width: 360px) {
+.skills-container h2{
+font-size: 0.7rem;
 }
 }
 

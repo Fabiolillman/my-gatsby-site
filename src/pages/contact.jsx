@@ -40,7 +40,14 @@ const ContactPage = ({data}) => {
         
          <section>
          <h3>Contact</h3>
-    
+         {data && data.allContentfulLinks && data.allContentfulLinks.nodes.map(node => (
+            <div key={node.id} className="contact-container">
+              {/* <a href='' className="email-btn" aria-label="Link to email form"></a> */}
+
+              <a href={node.linkedin} target="_blank" rel="noreferrer" aria-label="Link to linkedin" className="linkedin-btn"></a>
+              <p>{node.phone}</p>
+            </div>
+          ))}
          <form ref={form} onSubmit={sendEmail}>
           <label htmlFor="name">Name</label>
           <input type="text" id="name" required/>
@@ -49,14 +56,7 @@ const ContactPage = ({data}) => {
           <label htmlFor="message">Message</label>
           <textarea type="text-field" id="message" cols="30" rows="10" required/>
           <button className="submit-btn" aria-label="Submit form">SEND</button>
-          {data && data.allContentfulLinks && data.allContentfulLinks.nodes.map(node => (
-            <div key={node.id} className="contact-container">
-              {/* <a href='' className="email-btn" aria-label="Link to email form"></a> */}
 
-              <a href={node.linkedin} target="_blank" rel="noreferrer" aria-label="Link to linkedin" className="linkedin-btn"></a>
-              <p>{node.phone}</p>
-            </div>
-          ))}
         </form>
         </section>
         </StyledContact>
@@ -218,7 +218,7 @@ section{
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
-  width: 55%;
+  max-width: 25rem;
   margin: auto;
 }
 p{
@@ -276,6 +276,7 @@ box-shadow: 0px 0px 6px 0px rgba(249, 249, 249, 0.75);
 }
 
 .contact-container{
+  margin-top: 1rem;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -288,14 +289,35 @@ padding-top: 1rem;
 color: white;
 }
 
+@media screen and (max-width: 650px) {
+/* padding-top: 3rem;
+  margin-left: 0;
+  width: 100%; */
+  /* .contact-container{
+  flex-direction: column;
+
+} */
+/* section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+  width: 85vw;
+} */
+}
 @media screen and (max-width: 950px) {
 padding-top: 3rem;
   margin-left: 0;
   width: 100%;
-  .contact-container{
+  /* .contact-container{
   flex-direction: column;
 
-}
+} */
+/* section{
+
+width: 70vw;
+
+} */
 
 @keyframes drip {
   0%{
@@ -348,6 +370,7 @@ padding-top: 3rem;
 
 
 @media screen and (max-width: 750px) {
+
 @keyframes drip {
 0%{
   top: 8vmin;

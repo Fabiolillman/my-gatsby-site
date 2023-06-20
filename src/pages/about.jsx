@@ -312,7 +312,7 @@ article{
 }
 
 @media screen and (max-width: 650px) {
-  padding: 0 3rem;
+  padding: 0 1.3rem;
   .wrap h2{
 font-size: 2.7vw;
 }
@@ -322,8 +322,9 @@ font-size: 2.7vw;
 }
 
 .list-container{
-  width: 90%;
+  width: 100%;
 }
+
 }
 
 @media screen and (max-width: 460px) {

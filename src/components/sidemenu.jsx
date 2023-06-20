@@ -168,6 +168,9 @@ top: 0;
     height: 2.5rem;
     display: block;
     z-index: 100;
+    :hover{
+      cursor: pointer;
+    }
   }
 
   .hamburger-button.open + .hide-nav-wrap {
@@ -272,6 +275,11 @@ font-family: 'Michroma', sans-serif;
 }
 ::after{
     content: '/>';
+}
+:hover{
+  /* background-color: red; */
+  /* color: green; */
+  text-decoration: underline;
 }
 `
 

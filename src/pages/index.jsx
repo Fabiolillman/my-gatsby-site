@@ -296,8 +296,12 @@ text-align: center;
   height: 22rem;
 }
 .container {
-  width: 21rem;
+  max-width: 21rem;
   box-sizing: border-box;
+}
+
+h1{
+  font-size: 3rem;
 }
 }
 

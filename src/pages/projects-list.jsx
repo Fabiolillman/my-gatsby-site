@@ -407,22 +407,34 @@ h3{
 
 @media screen and (max-width: 500px) {
  .text-wrap, img{
-  width: 95%;
+  width: 85%;
 }
-.button-wrap a{
-  font-size: 0.8rem;
-min-width: 25vmin;
-height: 15vmin;
-line-height: 15vmin;
+
 }
-}
+
+
 
 @media screen and (max-width: 370px) {
 .text-wrap{
   height: auto;
   padding-bottom: 3rem;
 }
+.button-wrap a{
+  font-size: 0.8rem;
+min-width: 25vmin;
+height: 12vmin;
+line-height: 12vmin;
 }
+.button-wrap{
+  justify-content: space-around;
+}
+}
+
+@media screen and (max-width: 350px) {
+
+
+}
+
 @media (max-width: 1280px) and (max-height: 800px) {
   .tube.mid{
           height: 200%;
