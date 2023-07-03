@@ -125,6 +125,8 @@ const StyledLink = styled(Link)`
     0 0 30px #0fa,
     0 0 30px #0fa;
   }
+
+
 `
 
 const StyledHomeMenu = styled.main`
@@ -229,6 +231,12 @@ text-align: center;
   align-items: center;
 }
 }
+
+@media screen and (max-width: 540px) {
+    .text-wrap{
+      margin-bottom: 4rem;
+    }
+  }
 
 @keyframes neon-background {
   from { 

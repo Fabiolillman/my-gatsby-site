@@ -422,7 +422,25 @@ h3{
 
 }
 
+@media screen and (max-width: 440px) {
+  .text-wrap{
+  /* border: 1px solid white; */
+  /* width: 25rem; */
+  height: 20rem;
+  position: relative;
+}
 
+.button-wrap{
+  width: 100%;
+  /* position: s; */
+  position: static;
+  margin-top: 2rem;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+}
 
 @media screen and (max-width: 370px) {
 .text-wrap{
