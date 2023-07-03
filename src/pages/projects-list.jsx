@@ -69,6 +69,9 @@ const ProjectList = ({data}) => {
     <div className="button-wrap">
     {/* <StyledLink to={`/projects/${node.slug}/`}>More Info</StyledLink> */}
     {/* <a href="link">View site</a> */}
+    {node.android &&
+          <a className='android-download' href={node.android.url} target="_blank" rel="noreferrer" aria-label="Download link to the APK file">Download APK file</a>
+        }
     {node.githublink &&
           <a href={node.githublink} target="_blank" rel="noreferrer" aria-label="Link to github code">View code</a>
         }
@@ -96,6 +99,7 @@ const StyledProjectList = styled.aside`
 
 
 /* Animation Start */
+
 
 
 
@@ -198,6 +202,10 @@ background: linear-gradient(180deg, rgba(0,255,132,0) 10%, rgba(133,224,139,1) 2
   animation-delay: 12s;
 }
 
+.button-wrap .android-download{
+  /* color: red; */
+  padding: 0 1rem
+}
 @keyframes wave {
   0%{
     top: -2vmin;
@@ -365,6 +373,8 @@ box-shadow: 0px 0px 6px 0px rgba(249, 249, 249, 0.75);
   color: white;
 }
 }
+
+
 @media screen and (max-width: 1000px) {
 .button-wrap a{
   font-size: 0.9rem;
@@ -470,6 +480,9 @@ query MyQuery {
   allContentfulProjects(sort: {title: DESC}) {
     nodes {
       title
+      android {
+        url
+      }
       description
       slug
       skill
