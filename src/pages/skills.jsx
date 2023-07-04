@@ -212,7 +212,7 @@ padding-top: 2rem;
   width: 85vw;
 }
 }
-/* comment */
+/* comments */
 @media screen and (max-width: 700px) {
  .skill-wrap{
   gap: 24px;
