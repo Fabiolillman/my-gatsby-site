@@ -3,6 +3,7 @@ import * as React from "react"
 import '../index.css';
 import styled from 'styled-components';
 import SideMenu from "../components/sidemenu";
+import APK from '../images/app-release.apk'
 
 const ProjectList = ({data}) => {
 
@@ -70,7 +71,8 @@ const ProjectList = ({data}) => {
     {/* <StyledLink to={`/projects/${node.slug}/`}>More Info</StyledLink> */}
     {/* <a href="link">View site</a> */}
     {node.android &&
-          <a className='android-download' href={node.android.url} target="_blank" rel="noreferrer" aria-label="Download link to the APK file">Download APK file</a>
+          // <a className='android-download' href={node.android.url} target="_blank" rel="noreferrer" aria-label="Download link to the APK file">Download APK file</a>
+          <a className='android-download' href={APK} target="_blank" rel="noreferrer" aria-label="Download link to the APK file">Download APK file</a>
         }
     {node.githublink &&
           <a href={node.githublink} target="_blank" rel="noreferrer" aria-label="Link to github code">View code</a>

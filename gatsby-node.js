@@ -74,3 +74,25 @@
 // })
 
 // }
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /\.(apk)$/i,
+            use: [
+              {
+                loader: 'url-loader',
+                options: {
+                  limit: false, // Disable the size limit for inlining as a data URL
+                  name: 'assets/[name].[ext]', // Output path and filename for the processed file
+                },
+              },
+            ],
+          },
+        ],
+      },
+    });
+  };
+  
