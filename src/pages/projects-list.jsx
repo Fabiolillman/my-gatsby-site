@@ -80,7 +80,7 @@ const ProjectList = ({data}) => {
     {node.linksToPage &&
           <a href={node.linksToPage} target="_blank" rel="noreferrer" aria-label="Link to project live server">View Site</a>
         }
-
+{/* comment */}
     {/* <a href={node.githublink}>View code</a> */}
     {/* <StyledLink to={`/category/${node.category.category}`}>{node.category.category}</StyledLink> */}
     </div>
