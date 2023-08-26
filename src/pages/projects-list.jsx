@@ -70,9 +70,12 @@ const ProjectList = ({data}) => {
     <div className="button-wrap">
     {/* <StyledLink to={`/projects/${node.slug}/`}>More Info</StyledLink> */}
     {/* <a href="link">View site</a> */}
-    {node.android &&
-          // <a className='android-download' href={node.android.url} target="_blank" rel="noreferrer" aria-label="Download link to the APK file">Download APK file</a>
+    {node.android && 
           <a className='android-download' href={APK} target="_blank" rel="noreferrer" aria-label="Download link to the APK file">Download APK file</a>
+        }
+
+{node.appstore &&
+          <a href={node.appstore} target="_blank" rel="noreferrer" aria-label="Link to github code">View Store</a>
         }
     {node.githublink &&
           <a href={node.githublink} target="_blank" rel="noreferrer" aria-label="Link to github code">View code</a>
@@ -335,7 +338,7 @@ img{
   height: 18rem;
   position: relative; */
   /* line-height: 3rem; */
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   /* word-spacing: 3px; */
   font-family: 'Times New Roman', Times, serif;
 }
@@ -497,7 +500,7 @@ line-height: 12vmin;
 // `
 export const query = graphql`
 query MyQuery {
-  allContentfulProjects(sort: {title: DESC}) {
+  allContentfulProjects(sort: {updatedAt: DESC}) {
     nodes {
       title
       android {
@@ -506,6 +509,7 @@ query MyQuery {
       description
       slug
       skill
+      appstore
       id
       linksToPage
       githublink
