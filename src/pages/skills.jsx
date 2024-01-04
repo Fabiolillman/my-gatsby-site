@@ -56,7 +56,7 @@ export default SkillList
 const StyledSkillsList = styled.div`
   margin-left: 13rem;
   height: 100vh;
-padding-top: 10rem;
+padding-top: 2rem;
 /* overflow: hidden; */
 box-sizing: border-box;
 
