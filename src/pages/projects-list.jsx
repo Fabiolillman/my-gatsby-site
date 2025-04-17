@@ -60,7 +60,7 @@ const ProjectList = ({data}) => {
      </div>
      <article>
      <h3>Projects</h3>
-     {/* Regular loop through query data  */}
+     {/* Regular loop through query data */}
      {data.allContentfulProjects.nodes.map(node => (
   <div key={node.id} className="project-container">
     <img src={node.image.url} alt={node.title} />
