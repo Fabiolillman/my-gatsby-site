@@ -19,7 +19,7 @@ const IndexPage = ({data}) => {
 
 
 
-{/* CSS for background animation */}
+{/* CSS for background animation  */}
       <aside>
         <div className="pfp-wrap">
         <div className="container">
